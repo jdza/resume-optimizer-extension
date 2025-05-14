@@ -22,3 +22,17 @@ async function scrapeAndSend() {
   const data = await response.text();
   alert("Resume optimized! Check console or backend logs.");
 }
+
+console.log("popup.js loaded");
+
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("optimizeBtn");
+
+  if (button) {
+    button.addEventListener("click", function () {
+      console.log("Optimize Resume button clicked!");
+    });
+  } else {
+    console.warn("Button not found!");
+  }
+});
