@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Optimizer - Upload Resume</title>
+  <style>
+    body { max-width: 500px; margin: 40px auto; font-family: Arial, sans-serif; }
+    .container { display: flex; flex-direction: column; gap: 20px; }
+    .input-group { display: flex; flex-direction: column; gap: 5px; }
+    input[type="file"] { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    button { padding: 10px; background: #4CAF50; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #45a049; }
+    .error { color: red; }
+    .success { color: green; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Upload Your Resume</h2>
+    <div class="input-group">
+      <label for="resume">Upload Resume (.tex only):</label>
+      <input type="file" id="resume" accept=".tex">
+    </div>
+    <button id="upload">Upload Resume</button>
+    <div id="status"></div>
+    <h3>Current Uploaded Resume</h3>
+    <div id="currentResume">
+      <span style="color: #888;">No resume uploaded yet.</span>
+    </div>
+    <h3>History</h3>
+    <ul id="history"></ul>
+    <button id="clearHistory" style="margin-top:10px;">Clear History</button>
+  </div>
+  <script src="upload.js"></script>
+</body>
+</html>

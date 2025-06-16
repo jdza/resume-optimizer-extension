@@ -1,27 +1,33 @@
 {
   "manifest_version": 3,
   "name": "Resume Optimizer",
-  "description": "Generate a customized resume based on job postings.",
   "version": "1.0",
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
-    }
-  },
+  "description": "Optimize your resume for specific job postings",
   "permissions": [
-    "scripting",
+    "activeTab",
+    "storage",
     "tabs"
   ],
   "host_permissions": [
-    "http://127.0.0.1:5000/",
-    "<all_urls>"
+    "http://localhost:5000/*"
   ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
   "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
-  }
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["upload.html", "upload.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
